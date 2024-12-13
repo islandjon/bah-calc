@@ -51,10 +51,10 @@ def update_output(n_clicks, zip_code, pay_grade):
     if pay_grade_col not in bah_2025_without.columns:
         return "Invalid pay grade."
 
-    rate_with = bah_2024_with.loc[bah_2024_with['MHA'] == mha, f"{pay_grade_col}_2024"].values[0]
-    rate_without = bah_2024_without.loc[bah_2024_without['MHA'] == mha, f"{pay_grade_col}_2024"].values[0]
-    rate_with_2025 = bah_2025_with.loc[bah_2025_with['MHA'] == mha, f"{pay_grade_col}_2025"].values[0]
-    rate_without_2025 = bah_2025_without.loc[bah_2025_without['MHA'] == mha, f"{pay_grade_col}_2025"].values[0]
+    rate_with = bah_2024_with.loc[bah_2024_with['MHA'] == mha, f"{pay_grade_col}"].values[0]
+    rate_without = bah_2024_without.loc[bah_2024_without['MHA'] == mha, f"{pay_grade_col}"].values[0]
+    rate_with_2025 = bah_2025_with.loc[bah_2025_with['MHA'] == mha, f"{pay_grade_col}"].values[0]
+    rate_without_2025 = bah_2025_without.loc[bah_2025_without['MHA'] == mha, f"{pay_grade_col}"].values[0]
 
 
     # Calculate changes
