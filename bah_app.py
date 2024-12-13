@@ -1,6 +1,10 @@
 import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
+import flask
+# initialize the Dash app using Flask
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Load data
 zip_to_mha = pd.read_csv('./sorted_zipmha24.txt', delim_whitespace=True, header=None, names=['ZIP', 'MHA'])
