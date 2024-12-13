@@ -3,10 +3,10 @@ from dash import dcc, html, Input, Output
 import pandas as pd
 
 # Load data
-zip_to_mha = pd.read_csv('/mnt/data/sorted_zipmha24.txt', delim_whitespace=True, header=None, names=['ZIP', 'MHA'])
-bahw24 = pd.read_csv('/mnt/data/bahw24.txt', header=None)
-bahwo24 = pd.read_csv('/mnt/data/bahwo24.txt', header=None)
-bah_2025 = pd.read_excel('/mnt/data/2025 BAH Rates.xlsx')
+zip_to_mha = pd.read_csv('./sorted_zipmha24.txt', delim_whitespace=True, header=None, names=['ZIP', 'MHA'])
+bahw24 = pd.read_csv('./bahw24.txt', header=None)
+bahwo24 = pd.read_csv('./bahwo24.txt', header=None)
+bah_2025 = pd.read_excel('./2025 BAH Rates.xlsx')
 
 # Rename columns for clarity
 bahw24.columns = ["MHA"] + [f"E{i}" for i in range(1, 11)] + [f"O{i}" for i in range(1, 8)]
